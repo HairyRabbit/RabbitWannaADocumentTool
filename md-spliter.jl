@@ -1,8 +1,12 @@
-file = open(readstring, "hello.md")
+file = open("hello.md")
 
-function splitDoc(file)
-    re = r"##"
+test1 = eachline(file)
+
+chunk = []
+all = []
+
+for i in test1
+  #println(i)
+  ismatched = ismatch(r"^##", i)
+  println(ismatched ? i : false)
 end
-
-println(file)
-
